@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext } from "react";
 import WelcomeMessage from "./WelcomeMessage";
 import Child from "./Child";
 import CartList from "./CartList";
@@ -7,30 +7,51 @@ import { AiFillChrome } from "react-icons/ai";
 import ClickCounter from "./ClickCounter";
 import ArrayCounter from "./arrayCounter";
 import ObjectState from "./ObjectState";
+import ParentComponent from "./parentComponent";
+import ReducerExample from "./ReducerExample";
+
+//! creating context
+
+export const TempContext = createContext({
+  naam: "raj",
+  umar: 31,
+});
+
 const MainComponent = () => {
-  const product = {
-    name: "Apple",
-    price: "100",
-    avaiability: "In Stock",
+  const name = "Armaan";
+  const age = 21;
+
+  const address = {
+    houseNumber: "10",
+    colony: "xyz",
+    landmark: "opposite kc patel",
+    city: "vadodara",
   };
 
-  const array = [
-    {
-      name: "Apple",
-      price: "100",
-      avaiability: "Out of Stock",
-    },
-    {
-      name: "Banana",
-      price: "400",
-      avaiability: "In Stock",
-    },
-    {
-      name: "Mango",
-      price: "200",
-      avaiability: "In Stock",
-    },
-  ];
+  // const product = {
+  //   name: "Apple",
+  //   price: "100",
+  //   avaiability: "In Stock",
+  // };
+
+  // const array = [
+  //   {
+  //     name: "Apple",
+  //     price: "100",
+  //     avaiability: "Out of Stock",
+  //   },
+  //   {
+  //     name: "Banana",
+  //     price: "400",
+  //     avaiability: "In Stock",
+  //   },
+  //   {
+  //     name: "Mango",
+  //     price: "200",
+  //     avaiability: "In Stock",
+  //   },
+  // ];
+
   return (
     <>
       {/* <div>I am the MainComponent</div> */}
@@ -69,14 +90,15 @@ const MainComponent = () => {
       {/* <ClickCounter></ClickCounter> */}
       {/* <ArrayCounter /> */}
 
-      <ObjectState />
+      {/* <ObjectState /> */}
+      {/* 
+      <TempContext.Provider value={{ name, age }}>
+        <ParentComponent />
+      </TempContext.Provider> */}
+
+      <ReducerExample />
     </>
   );
-
-  function submitHandler() {
-    alert("mouse moved");
-    console.log("button hovered");
-  }
 };
 
 export default MainComponent;
