@@ -9,6 +9,7 @@ import ArrayCounter from "./arrayCounter";
 import ObjectState from "./ObjectState";
 import ParentComponent from "./parentComponent";
 import ReducerExample from "./ReducerExample";
+import UseRefExample from "./UseRefExample";
 
 //! creating context
 
@@ -96,7 +97,8 @@ const MainComponent = () => {
         <ParentComponent />
       </TempContext.Provider> */}
 
-      <ReducerExample />
+      {/* <ReducerExample /> */}
+      <UseRefExample />
     </>
   );
 };

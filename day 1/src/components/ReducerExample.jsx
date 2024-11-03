@@ -1,7 +1,8 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 
 const ReducerExample = () => {
   const initialState = { count: 0 };
+  const [value, setValue] = useState(0);
 
   const reducer = (state, action) => {
     switch (action.type) {
@@ -11,6 +12,10 @@ const ReducerExample = () => {
         return { ...state, count: state.count - 1 };
       case "res":
         return { ...state, count: 0 };
+      case "incByValue":
+        return { ...state, count: state.count + Number(action.payload) };
+      case "decByValue":
+        return { ...state, count: state.count - Number(action.payload) };
 
       default:
         return state;
@@ -30,6 +35,28 @@ const ReducerExample = () => {
       </button>
       <button type="button" onClick={() => dispatch({ type: "res" })}>
         Reset
+      </button>
+      <br />
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+      <button
+        type="button"
+        onClick={() => {
+          dispatch({ type: "incByValue", payload: value });
+        }}
+      >
+        Inc By Value
+      </button>
+      <button
+        type="button"
+        onClick={() => {
+          dispatch({ type: "decByValue", payload: value });
+        }}
+      >
+        Dec By Value
       </button>
     </>
   );
