@@ -10,6 +10,9 @@ import ObjectState from "./ObjectState";
 import ParentComponent from "./parentComponent";
 import ReducerExample from "./ReducerExample";
 import UseRefExample from "./UseRefExample";
+import Timer from "./Timer";
+import UseId from "./UseId";
+import TodoApp from "./TodoApp";
 
 //! creating context
 
@@ -98,7 +101,13 @@ const MainComponent = () => {
       </TempContext.Provider> */}
 
       {/* <ReducerExample /> */}
-      <UseRefExample />
+      {/* <UseRefExample /> */}
+
+      {/* <Timer /> */}
+
+      {/* <UseId /> */}
+
+      <TodoApp />
     </>
   );
 };
