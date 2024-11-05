@@ -13,6 +13,11 @@ import UseRefExample from "./UseRefExample";
 import Timer from "./Timer";
 import UseId from "./UseId";
 import TodoApp from "./TodoApp";
+import Meals from "./Meals";
+import Calculator from "./Calculator";
+import RandomBackground from "./RandomBackground";
+import Testimonials from "./Testimonials";
+import Accordian from "./Accordian";
 
 //! creating context
 
@@ -107,7 +112,14 @@ const MainComponent = () => {
 
       {/* <UseId /> */}
 
-      <TodoApp />
+      {/* <TodoApp /> */}
+      {/* <Meals /> */}
+
+      {/* <Calculator/> */}
+      {/* <RandomBackground /> */}
+      {/* <Testimonials /> */}
+
+      <Accordian/>
     </>
   );
 };
