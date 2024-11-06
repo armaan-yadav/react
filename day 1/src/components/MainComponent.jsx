@@ -18,6 +18,9 @@ import Calculator from "./Calculator";
 import RandomBackground from "./RandomBackground";
 import Testimonials from "./Testimonials";
 import Accordian from "./Accordian";
+import Form from "./Form";
+import Ecom from "../ecom/Ecom";
+import { EcomProductsContext } from "../ecom/context/Context";
 
 //! creating context
 
@@ -119,7 +122,11 @@ const MainComponent = () => {
       {/* <RandomBackground /> */}
       {/* <Testimonials /> */}
 
-      <Accordian/>
+      {/* <Accordian/> */}
+
+      {/* <Form /> */}
+
+      <Ecom />
     </>
   );
 };
